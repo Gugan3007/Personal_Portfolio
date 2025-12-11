@@ -1,9 +1,8 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 import { BookOpen, Target, Lightbulb, Award } from 'lucide-react';
-import { useRef } from 'react';
 import SectionTitle from '../components/ui/SectionTitle';
 import ParallaxLayer from '../components/ParallaxLayer';
-import profileImage from 'figma:asset/df2f62cb04e4ae7a1df6fa2e60b0f7e6ba0bcce4.png';
+import profileImage from '../assets/df2f62cb04e4ae7a1df6fa2e60b0f7e6ba0bcce4.png';
 
 export default function About() {
   return (

@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { useState } from 'react';
+import { motion } from 'motion/react';
 import SectionTitle from '../components/ui/SectionTitle';
 import ProjectCard from '../components/ui/ProjectCard';
 import ParallaxLayer from '../components/ParallaxLayer';

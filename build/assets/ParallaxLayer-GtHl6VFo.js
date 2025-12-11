@@ -1,0 +1,1 @@
+import{r as n,u as l,a as u,j as c,m as f}from"./index-hCyytZpa.js";function x({children:t,speed:s=.5,className:a=""}){const r=n.useRef(null),{scrollYProgress:o}=l({target:r,offset:["start end","end start"]}),e=u(o,[0,1],[-100*s,100*s]);return c.jsx(f.div,{ref:r,style:{y:e},className:a,children:t})}export{x as P};
