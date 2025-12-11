@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Github, ExternalLink, Sparkles } from 'lucide-react';
-import { Button } from './Button';
+import { Button } from './button';
 
 interface ProjectCardProps {
   title: string;
