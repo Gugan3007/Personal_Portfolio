@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/ui/button';
 
 export default function BlogPost() {
   const { id } = useParams();

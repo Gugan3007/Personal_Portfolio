@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowRight, Download, Code2, Rocket, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/ui/button';
 import profileImage from 'figma:asset/df2f62cb04e4ae7a1df6fa2e60b0f7e6ba0bcce4.png';
 import resumePDF from '../assets/Gugan_S_S.pdf';
 import ParallaxLayer from '../components/ParallaxLayer';

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/ui/button';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
