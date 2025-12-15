@@ -160,7 +160,7 @@ export default function HighwayTimeline() {
             { icon: '🎓', label: 'Years of Study', value: '2023-2027' },
             { icon: '💼', label: 'Internships', value: '3+' },
             { icon: '🚀', label: 'Projects', value: '5+' },
-            { icon: '🏆', label: 'Certificates', value: '11+' },
+            { icon: '🏆', label: 'Certificates', value: '12+' },
           ].map((stat, i) => (
             <motion.div
               key={i}
