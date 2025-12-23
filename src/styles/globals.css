@@ -365,3 +365,21 @@
       0 12px 12px rgba(0, 0, 0, 0.04);
   }
 }
+
+/* Lenis scroll-driven utilities */
+:root { --scroll: 0; }
+
+.parallax-y {
+  transform: translateY(calc(var(--scroll) * 40px));
+  transition: transform 0.2s linear;
+}
+
+.fade-on-scroll {
+  opacity: calc(1 - var(--scroll));
+  transition: opacity 0.18s linear;
+}
+
+/* ensure smooth overscroll behavior */
+html, body {
+  overscroll-behavior-y: none;
+}

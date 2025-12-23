@@ -90,7 +90,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, type: "spring" }}
-                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight parallax-y">
                 Hi, I'm{' '}
                 <span className="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-shimmer">
                   Gugan

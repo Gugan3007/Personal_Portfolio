@@ -2,17 +2,18 @@ import { motion } from 'motion/react';
 import { GraduationCap, Briefcase, Award, Calendar, Trophy, Sparkles } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 import HighwayTimeline from '../components/HighwayTimeline';
-import bluestockCert from 'figma:asset/c76b918304fa991701377ecc674531ff691f39c3.png';
-import tataCrucibleCert from 'figma:asset/0adde60f945a5a0603fee48d534ca526bacf7b9c.png';
-import mobilityXCert from 'figma:asset/e52e64b184d33168a529dcdc951ea56fdaf32812.png';
-import unstopCert from 'figma:asset/e30da9bd156139227d76cb7d7130685aa23f7688.png';
-import isroHackathonCert from 'figma:asset/26715e9a65b1a78515c44440d5aabee020b8f99d.png';
-import narcoticsCert from 'figma:asset/28bbbd6ad4ccc98af4efdc8641cd64b4f7d96a5a.png';
-import amritaSevanavaram from 'figma:asset/27a15f140cb0e09487f67b58ccca65dca9ab6467.png';
-import amritaSeedBallCert from 'figma:asset/3d8fb3282495d0b9d48edf5b452e3fc96dc0669e.png';
-import adobeHackathonCert from 'figma:asset/77f5349968ef6be84c77ae37778a4ee6e1e5ed3b.png';
-import googleAICert from 'figma:asset/5c17692f140394037de70704031ac4d7d47879ef.png';
-import uptricksOfferLetter from 'figma:asset/e86111c508e992cef0c9abf38229b7792e84d7f1.png';
+import bluestockCert from '../assets/c76b918304fa991701377ecc674531ff691f39c3.png';
+import tataCrucibleCert from '../assets/0adde60f945a5a0603fee48d534ca526bacf7b9c.png';
+import mobilityXCert from '../assets/e52e64b184d33168a529dcdc951ea56fdaf32812.png';
+import unstopCert from '../assets/e30da9bd156139227d76cb7d7130685aa23f7688.png';
+import isroHackathonCert from '../assets/26715e9a65b1a78515c44440d5aabee020b8f99d.png';
+import narcoticsCert from '../assets/28bbbd6ad4ccc98af4efdc8641cd64b4f7d96a5a.png';
+import amritaSevanavaram from '../assets/27a15f140cb0e09487f67b58ccca65dca9ab6467.png';
+import adobeHackathonCert from '../assets/77f5349968ef6be84c77ae37778a4ee6e1e5ed3b.png';
+import googleAICert from '../assets/5c17692f140394037de70704031ac4d7d47879ef.png';
+import navoditaOfferLetter from '../assets/3d8fb3282495d0b9d48edf5b452e3fc96dc0669e.png';
+import uptricksOfferLetter from '../assets/e86111c508e992cef0c9abf38229b7792e84d7f1.png';
+import niteCTFCert from '../assets/nitectf25-certificate.png';
 
 export default function Experience() {
   const education = [
@@ -35,8 +36,9 @@ export default function Experience() {
       grade: '92/100 in SSLC',
       description: 'Completed higher secondary education with strong foundation in Mathematics and Computer Science.',
       highlights: [
-        'Scored 92% in board examinations',
-        'Active in extracurricular activities',
+        'Scored 87% in board examinations',
+        'Served as School Cultural Secretary',
+        
       ],
     },
     {
@@ -46,13 +48,28 @@ export default function Experience() {
       grade: '87/100 in HSC',
       description: 'Completed secondary education with distinction.',
       highlights: [
-        'Scored 87% in board examinations',
-        'Served as School Cultural Secretary',
+        'Scored 92% in board examinations',
+        'Active in extracurricular activities',
+        
       ],
     },
   ];
 
   const internships = [
+    {
+      position: 'Full-Stack Development Intern',
+      company: 'Navodita Infotech',
+      duration: 'Dec 2025 - Jan 2026',
+      location: 'Remote',
+      description: 'Working on full-stack development projects, building scalable web applications and implementing modern development practices.',
+      responsibilities: [
+        'Developing full-stack web applications',
+        'Implementing responsive user interfaces',
+        'Building RESTful APIs and backend services',
+        'Collaborating with development team on projects',
+      ],
+      technologies: ['React', 'Node.js', 'MongoDB', 'JavaScript', 'Git'],
+    },
     {
       position: 'Software Development Engineer (SDE) Intern',
       company: 'Bluestock Fintech',
@@ -86,7 +103,7 @@ export default function Experience() {
       title: 'Project Excellence',
       organization: 'Various Projects',
       year: '2024-2025',
-      description: 'Successfully completed multiple technical projects including NLP-based systems and embedded robotics.',
+      description: 'Successfully completed multiple technical projects including NLP-based systems and embedded systems.',
     },
   ];
 
@@ -96,28 +113,33 @@ export default function Experience() {
       <section className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-24 md:py-32 overflow-hidden" style={{marginTop: '5rem'}}>
         {/* Animated particles */}
         <div className="absolute inset-0">
-          {[...Array(15)].map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: [0.1, 0.3, 0.1],
-                scale: [1, 1.5, 1],
-                x: [0, Math.random() * 100 - 50, 0],
-                y: [0, Math.random() * 100 - 50, 0],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="absolute w-32 h-32 bg-white rounded-full blur-3xl"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
+          {[...Array(8)].map((_, i) => {
+            const speed = Math.round(Math.random() * 60 - 30); // px parallax factor
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: [0.08, 0.25, 0.08],
+                  scale: [0.9, 1.25, 0.9],
+                  x: [0, Math.random() * 60 - 30, 0],
+                  y: [0, Math.random() * 60 - 30, 0],
+                }}
+                transition={{
+                  duration: Math.random() * 20 + 20,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                className="absolute w-20 h-20 bg-white rounded-full blur-2xl"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  transform: `translateY(calc(var(--scroll) * ${speed}px))`,
+                  willChange: 'transform, opacity',
+                }}
+              />
+            );
+          })}
         </div>
 
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl relative z-10">
@@ -128,9 +150,10 @@ export default function Experience() {
             className="text-center"
           >
             <motion.div
-              animate={{ rotate: [0, 20, -20, 0], scale: [1, 1.1, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
+              animate={{ rotate: [-10, 10, -10], scale: [1, 1.05, 1] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="inline-block mb-6"
+              style={{ willChange: 'transform' }}
             >
               <span className="text-6xl">🎓</span>
             </motion.div>
@@ -159,12 +182,13 @@ export default function Experience() {
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ scale: 1.02 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.9, delay: index * 0.15, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.01 }}
                 className="bg-gradient-to-br from-white/90 to-blue-50/70 backdrop-blur-md rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all border border-white/60"
+                style={{ willChange: 'transform, opacity' }}
               >
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
@@ -217,11 +241,12 @@ export default function Experience() {
             {internships.map((internship, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.9, ease: 'easeInOut' }}
                 className="group relative"
+                style={{ willChange: 'transform, opacity' }}
               >
                 {/* Glow effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-75 blur transition duration-500" />
@@ -230,9 +255,10 @@ export default function Experience() {
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <motion.div
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
+                        whileHover={{ rotate: 15, scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white shadow-lg"
+                        style={{ willChange: 'transform' }}
                       >
                         <Briefcase size={32} />
                       </motion.div>
@@ -272,8 +298,10 @@ export default function Experience() {
                         {internship.technologies.map((tech, idx) => (
                           <motion.span
                             key={idx}
-                            whileHover={{ scale: 1.1, y: -2 }}
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            transition={{ duration: 0.2, ease: 'easeInOut' }}
                             className="px-3 py-1.5 bg-purple-50 text-purple-600 rounded-full text-sm hover:bg-purple-100 transition-all cursor-default"
+                            style={{ willChange: 'transform' }}
                           >
                             {tech}
                           </motion.span>
@@ -292,28 +320,33 @@ export default function Experience() {
       <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated background particles */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: [0.1, 0.3, 0.1],
-                scale: [1, 1.5, 1],
-                x: [0, Math.random() * 100 - 50, 0],
-                y: [0, Math.random() * 100 - 50, 0],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="absolute w-32 h-32 bg-white rounded-full blur-3xl"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
+          {[...Array(10)].map((_, i) => {
+            const speed = Math.round(Math.random() * 40 - 20);
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: [0.08, 0.25, 0.08],
+                  scale: [0.9, 1.25, 0.9],
+                  x: [0, Math.random() * 50 - 25, 0],
+                  y: [0, Math.random() * 50 - 25, 0],
+                }}
+                transition={{
+                  duration: Math.random() * 20 + 20,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                className="absolute w-20 h-20 bg-white rounded-full blur-2xl"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  transform: `translateY(calc(var(--scroll) * ${speed}px))`,
+                  willChange: 'transform, opacity',
+                }}
+              />
+            );
+          })}
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -324,9 +357,10 @@ export default function Experience() {
             className="text-center mb-16"
           >
             <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+              animate={{ rotate: [-10, 10, -10], scale: [1, 1.05, 1] }}
+              transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
               className="inline-block mb-6"
+              style={{ willChange: 'transform' }}
             >
               <Trophy size={64} className="text-yellow-400" />
             </motion.div>
@@ -336,7 +370,7 @@ export default function Experience() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto relative z-10">
             {/* ISRO Bharatiya Antariksh Hackathon */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -365,11 +399,13 @@ export default function Experience() {
                   </h4>
                   <div className="rounded-xl overflow-hidden shadow-xl">
                     <motion.img
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4, ease: 'easeInOut' }}
                       src={isroHackathonCert}
                       alt="ISRO Bharatiya Antariksh Hackathon Certificate"
                       className="w-full h-auto"
+                      loading="lazy"
+                      style={{ willChange: 'transform, opacity' }}
                     />
                   </div>
                   <p className="text-base text-gray-800 text-center mt-4 font-semibold">
@@ -389,7 +425,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600 via-amber-600 to-orange-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -431,7 +467,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -473,13 +509,13 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
                 <div className="p-6">
                   <h4 className="mb-4 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Bluestock Fintech - SDE Internship
+                    Bluestock Fintech - SDE Internship Offer Letter
                   </h4>
                   <div className="rounded-xl overflow-hidden shadow-xl">
                     <motion.img
@@ -491,7 +527,7 @@ export default function Experience() {
                     />
                   </div>
                   <p className="text-base text-gray-800 text-center mt-4 font-semibold">
-                    Sep 2025 - Oct 2025
+                    1 Sep 2025 - 30 Oct 2025
                   </p>
                 </div>
               </motion.div>
@@ -507,7 +543,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -541,7 +577,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -575,7 +611,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -599,40 +635,6 @@ export default function Experience() {
               </motion.div>
             </motion.div>
 
-            {/* Amrita Seed Ball */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="group relative"
-            >
-              <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-lime-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
-              <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
-                transition={{ duration: 0.3 }}
-                className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
-              >
-                <div className="p-6">
-                  <h4 className="mb-4 text-center bg-gradient-to-r from-green-600 to-lime-600 bg-clip-text text-transparent">
-                    Amrita Seed Ball Making
-                  </h4>
-                  <div className="rounded-xl overflow-hidden shadow-xl">
-                    <motion.img
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
-                      src={amritaSeedBallCert}
-                      alt="Amrita Seed Ball Certificate"
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <p className="text-base text-gray-800 text-center mt-4 font-semibold">
-                    Amma's 70th Birthday Celebrations - Sep 2023
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-
             {/* Adobe Hackathon */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -643,7 +645,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -677,7 +679,7 @@ export default function Experience() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
               <motion.div
-                whileHover={{ scale: 1.02, y: -5 }}
+                whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative bg-gradient-to-br from-white/95 to-blue-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
               >
@@ -696,6 +698,49 @@ export default function Experience() {
                   </div>
                   <p className="text-base text-gray-800 text-center mt-4 font-semibold">
                     Team Alpha - Finalist
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Navodita Infotech Internship Offer */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotateY: -30 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.9, type: 'spring' }}
+              className="group relative"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-pink-500 to-rose-500 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
+              <motion.div
+                whileHover={{ scale: 1.05, y: -15, rotateY: 5 }}
+                transition={{ duration: 0.4, type: 'spring', stiffness: 200 }}
+                className="relative bg-gradient-to-br from-white/95 to-red-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
+              >
+                <div className="absolute top-0 right-0 p-4 z-20">
+                  <motion.div
+                    animate={{ rotate: 360, scale: [1, 1.3, 1] }}
+                    transition={{ duration: 4, repeat: Infinity, delay: 2.8 }}
+                  >
+                    <Briefcase className="text-rose-600" size={28} />
+                  </motion.div>
+                </div>
+                <div className="p-6">
+                  <h4 className="mb-4 text-center bg-gradient-to-r from-rose-600 to-red-600 bg-clip-text text-transparent">
+                    Navodita Infotech - Full-Stack Development Intern
+                  </h4>
+                  <div className="rounded-xl overflow-hidden shadow-2xl relative group/img">
+                    <motion.img
+                      whileHover={{ scale: 1.15, rotate: 2 }}
+                      transition={{ duration: 0.6, type: 'spring' }}
+                      src={navoditaOfferLetter}
+                      alt="Navodita Infotech Internship Offer Letter"
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-rose-600/20 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <p className="text-base text-gray-800 text-center mt-4 font-semibold">
+                    Internship Offer - 12 Dec 2025 to 11 Jan 2026
                   </p>
                 </div>
               </motion.div>
@@ -739,6 +784,40 @@ export default function Experience() {
                   </div>
                   <p className="text-base text-gray-800 text-center mt-4 font-semibold">
                     Internship Offer - Dec 2025 to Jan 2026
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* niteCTF'25 Certificate */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+              className="group relative"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-teal-600 rounded-2xl opacity-75 blur-lg group-hover:opacity-100 transition duration-500 transition-opacity" />
+              <motion.div
+                whileHover={{ scale: 1.05, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="relative bg-gradient-to-br from-white/95 to-cyan-50/80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-white/60"
+              >
+                <div className="p-6">
+                  <h4 className="mb-4 text-center bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
+                    niteCTF'25 - MIT Manipal
+                  </h4>
+                  <div className="rounded-xl overflow-hidden shadow-xl">
+                    <motion.img
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                      src={niteCTFCert}
+                      alt="niteCTF'25 Certificate"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <p className="text-base text-gray-800 text-center mt-4 font-semibold">
+                    Team Slate - Certificate of Participation
                   </p>
                 </div>
               </motion.div>
