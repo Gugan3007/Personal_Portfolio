@@ -1,11 +1,42 @@
 
-  # Build Personal Portfolio Website
+# Personal Portfolio Website 🌐
 
-  This is a code bundle for Build Personal Portfolio Website. The original project is available at https://www.figma.com/design/mXRPsViD5yOHITFB7dNtsJ/Build-Personal-Portfolio-Website.
+A modern, responsive **personal portfolio website** built using **React 18, TypeScript, and Tailwind CSS**.  
+It features smooth animations, interactive UI components, and sections to showcase projects, skills, experience, and blogs.
 
-  ## Running the code
+---
 
-  Run `npm i` to install the dependencies.
+## 🚀 Tech Stack
 
-  Run `npm run dev` to start the development server.
-  
+### Frontend
+- **React 18**
+- **TypeScript**
+- **Vite**
+
+### Styling & Animation
+- **Tailwind CSS**
+- **Framer Motion**
+
+### UI & Icons
+- **Radix UI**
+- **Lucide Icons**
+
+### Routing
+- **React Router DOM**
+
+---
+
+## ✨ Features
+
+- 📱 **Fully responsive design** (mobile, tablet, desktop)
+- 🎨 **Modern UI with smooth animations**
+- 🧭 **Mobile-optimized navigation**
+- 🗂️ **Interactive project showcase with filtering**
+- 📝 **Blog section with search functionality**
+- 📬 **Contact form with validation**
+- ⚡ **Fast performance with Vite**
+
+---
+
+## 📂 Project Structure
+
